@@ -42,7 +42,7 @@ end
 GMlintodisplacement = single(2*(h/3)*(Istrip(1) + 4*sum(Istrip(2:2:end-1)) + 2*sum(Istrip(3:2:end-2)) + Istrip(end)));
 C55 = GMlintodisplacement * rho * g;
 fprintf('C55 : %.2f\n', C55);
-C35 = -rho * g * xysum;
+C35 = -rho * g * (xysum-lcf*Awp); %from lcf
 C53 = C35;
 fprintf('C35 : %.2f\n', C35);
 fprintf('C53 : %.2f\n', C53);
